@@ -5,10 +5,10 @@ def create_app():
 
     @app.route('/') # pagina padrão
     def home():
-        return render_template("home.html") 
+        return render_template("home.html")  # procura por um template na pasta templates
 
-    @app.route("/salvador")
-    def salvador():
-        return "Salvador é a capital da Bahia"
+    @app.route("/about")
+    def about():
+        return render_template("about.html")
     
     return app
